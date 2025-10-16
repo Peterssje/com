@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Artisan Jewelry | Luxury Custom Jewelry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Luxury Design */
+        :root {
+            --deep-navy: #0a0e17;
+            --rich-gold: #d4af37;
+            --warm-gold: #b8941f;
+            --soft-gold: #f5e6c8;
+            --pure-white: #ffffff;
+            --light-ivory: #f8f5f0;
+            --charcoal: #1a1a1a;
+            --platinum: #e5e4e2;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--light-ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .gold-text {
+            color: var(--rich-gold);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            background-color: transparent;
+            color: var(--charcoal);
+            border: 1px solid var(--charcoal);
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-weight: 500;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--charcoal);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover:before {
+            left: 0;
+        }
+
+        .btn:hover {
+            color: var(--pure-white);
+        }
+
+        .btn-gold {
+            background-color: var(--rich-gold);
+            border-color: var(--rich-gold);
+            color: var(--pure-white);
+        }
+
+        .btn-gold:before {
+            background: var(--warm-gold);
+        }
+
+        .btn-gold:hover {
+            color: var(--pure-white);
+            border-color: var(--warm-gold);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 14, 23, 0.9);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        header.scrolled {
+            background-color: rgba(10, 14, 23, 0.95);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--pure-white);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--rich-gold);
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 22px;
+            color: var(--rich-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--pure-white);
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 400;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--rich-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--rich-gold);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--pure-white);
+        }
+
+        /* Page Content */
+        .page {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.8)), url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            display: flex;
+            align-items: center;
+            color: var(--pure-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin-left: 10%;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--pure-white);
+            position: relative;
+        }
+
+        .about:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            height: 600px;
+            background: url('https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--rich-gold);
+            z-index: -1;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--rich-gold);
+            bottom: -15px;
+            left: 0;
+        }
+
+        .text-center .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background-color: var(--deep-navy);
+            color: var(--pure-white);
+            position: relative;
+        }
+
+        .portfolio:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(10, 14, 23, 0.9) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            opacity: 1;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            background: linear-gradient(to bottom, transparent 0%, rgba(10, 14, 23, 0.95) 100%);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .portfolio-overlay p {
+            color: var(--soft-gold);
+            margin-bottom: 0;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light-ivory);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background-color: var(--pure-white);
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--rich-gold);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover:before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .service-icon {
+            font-size: 50px;
+            color: var(--rich-gold);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Clients Section */
+        .clients {
+            background-color: var(--pure-white);
+            position: relative;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            gap: 50px;
+        }
+
+        .client-logo {
+            height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            color: var(--rich-gold);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--deep-navy);
+            color: var(--pure-white);
+            position: relative;
+        }
+
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+        }
+
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 60px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 60px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .testimonial-text:before, .testimonial-text:after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--rich-gold);
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .testimonial-text:before {
+            top: -30px;
+            left: -20px;
+        }
+
+        .testimonial-text:after {
+            bottom: -60px;
+            right: -20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--rich-gold);
+            font-size: 1.1rem;
+        }
+
+        /* Shop Section */
+        .shop {
+            background-color: var(--light-ivory);
+            position: relative;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background-color: var(--pure-white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+            position: relative;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: var(--rich-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--rich-gold);
+            color: var(--pure-white);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--warm-gold);
+        }
+
+        /* Cart Section */
+        .cart {
+            background-color: var(--pure-white);
+            position: relative;
+        }
+
+        .cart-container {
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .cart-items {
+            margin-bottom: 40px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .cart-item:hover {
+            background-color: rgba(248, 245, 240, 0.5);
+        }
+
+        .cart-item-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 30px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .cart-item-price {
+            color: var(--rich-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            margin: 0 30px;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            background-color: var(--light-ivory);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background-color: var(--rich-gold);
+            color: var(--pure-white);
+        }
+
+        .quantity-input {
+            width: 60px;
+            height: 35px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .remove-item:hover {
+            color: #ff4d4d;
+        }
+
+        .cart-summary {
+            background-color: var(--light-ivory);
+            padding: 40px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
+        }
+
+        .summary-total {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: var(--rich-gold);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: var(--rich-gold);
+            color: var(--pure-white);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+            margin-top: 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+        }
+
+        .checkout-btn:hover {
+            background-color: var(--warm-gold);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--deep-navy);
+            color: var(--pure-white);
+            position: relative;
+        }
+
+        .contact:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 60px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--pure-white);
+        }
+
+        .form-control:focus {
+            border-color: var(--rich-gold);
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--deep-navy);
+            color: var(--pure-white);
+            padding: 100px 0 50px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 70px;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--rich-gold);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--rich-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            border-color: var(--rich-gold);
+            color: var(--rich-gold);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .about-content {
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+                margin-top: 40px;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--deep-navy);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 50px;
+            }
+            
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .cart-item-img {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            
+            .cart-item-quantity {
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .portfolio-grid, .services-grid, .shop-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial {
+                padding: 40px 30px;
+            }
+            
+            .testimonial-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-gem logo-icon"></i>
+                    Patrick's <span>Artisan</span>
+                </a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="clients">Clients</a></li>
+                    <li><a href="#" class="nav-link" data-page="shop">Shop</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="#" class="nav-link" data-page="cart">Cart <span id="cart-count">(0)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Timeless Elegance, Crafted with Precision</h1>
+                <p>Luxury custom jewelry for corporate clients and private collectors seeking exceptional craftsmanship and distinctive design.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-gold nav-link" data-page="portfolio">View Collection</a>
+                    <a href="#" class="btn nav-link" data-page="contact">Commission a Piece</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-padding about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Master Artisan</h2>
+                        <p>Patrick brings over 15 years of expertise in luxury jewelry design, creating bespoke pieces for discerning clients worldwide. His journey began at the prestigious École des Arts Joailliers in Paris, where he mastered traditional techniques while developing his unique contemporary aesthetic.</p>
+                        <p>Each creation is meticulously handcrafted using only the finest ethically sourced materials, resulting in jewelry that becomes cherished heirlooms and powerful brand symbols.</p>
+                        <a href="#" class="btn nav-link" data-page="about">Discover the Story</a>
+                    </div>
+                    <div class="about-image"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-padding portfolio">
+            <div class="container">
+                <h2 class="section-title text-center">Signature Collections</h2>
+                <p class="text-center">A curated selection of custom pieces created for corporate clients and private collectors</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Corporate Collection" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Collection</h3>
+                            <p>Executive gifts for global financial institutions</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Signature Ring" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Signature Ring</h3>
+                            <p>Custom design for a private collector</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Estate Collection" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Estate Collection</h3>
+                            <p>Luxury pieces for real estate conglomerates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+        <div class="section-padding about">
+            <div class="container">
+                <h2 class="section-title">The Artisan's Journey</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Patrick's journey into the world of fine jewelry began in his early childhood, watching his grandfather restore antique timepieces with meticulous precision. This early exposure to craftsmanship ignited a passion that would shape his career.</p>
+                        <p>After completing his formal education at the École des Arts Joailliers in Paris, Patrick honed his skills working with renowned jewelry houses across Europe. It was during this time that he developed his signature style—a harmonious blend of traditional techniques with contemporary design sensibilities.</p>
+                        <p>In 2010, Patrick established his own studio, focusing exclusively on bespoke creations for corporate clients and private collectors. His philosophy centers on creating pieces that not only showcase exceptional craftsmanship but also carry profound meaning for their owners.</p>
+                        <p>Today, Patrick's work is sought after by luxury brands, financial institutions, and discerning individuals who appreciate the artistry and storytelling embedded in each unique creation.</p>
+                        <blockquote style="font-style: italic; border-left: 3px solid var(--rich-gold); padding-left: 20px; margin: 30px 0;">
+                            "True luxury is not about ostentation, but about the integrity of materials, the precision of craftsmanship, and the story each piece tells."
+                        </blockquote>
+                    </div>
+                    <div class="about-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section id="portfolio" class="page">
+        <div class="section-padding portfolio">
+            <div class="container">
+                <h2 class="section-title text-center">Portfolio</h2>
+                <p class="text-center">A selection of custom pieces created for corporate clients and private collectors</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Corporate Collection" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Collection</h3>
+                            <p>Executive gifts for global financial institutions</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Signature Ring" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Signature Ring</h3>
+                            <p>Custom design for a private collector</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Estate Collection" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Estate Collection</h3>
+                            <p>Luxury pieces for real estate conglomerates</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Diamond Necklace" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Diamond Necklace</h3>
+                            <p>Commissioned piece for a private event</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1596944946757-58b03aca2b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gold Cufflinks" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Gold Cufflinks</h3>
+                            <p>Executive gift set for financial institution</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Custom Brooch" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Custom Brooch</h3>
+                            <p>Statement piece for a luxury brand ambassador</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services" class="page">
+        <div class="section-padding services">
+            <div class="container">
+                <h2 class="section-title text-center">Services</h2>
+                <p class="text-center">Comprehensive jewelry design solutions for corporate and private clients</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Corporate Collections</h3>
+                        <p>Exclusive jewelry lines designed to embody your brand identity for executive gifts, corporate awards, and milestone celebrations.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Private Commissions</h3>
+                        <p>Bespoke pieces created for discerning collectors, from engagement rings to statement pieces that become family heirlooms.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Design Consultation</h3>
+                        <p>Collaborative design process from concept to completion, ensuring each piece perfectly captures your vision and requirements.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Restoration & Repair</h3>
+                        <p>Expert restoration of heirloom pieces and repair of fine jewelry using traditional techniques and premium materials.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Limited Editions</h3>
+                        <p>Exclusive limited-run collections that maintain their value and exclusivity for discerning collectors and corporate clients.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Packaging & Presentation</h3>
+                        <p>Luxury packaging solutions that enhance the unboxing experience and reflect the quality of your investment piece.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Page -->
+    <section id="clients" class="page">
+        <div class="section-padding clients">
+            <div class="container">
+                <h2 class="section-title text-center">Select Clients</h2>
+                <p class="text-center">Trusted by prestigious organizations and discerning collectors worldwide</p>
+                <div class="client-logos">
+                    <div class="client-logo">Global Financial Group</div>
+                    <div class="client-logo">Prestige Real Estate</div>
+                    <div class="client-logo">Heritage Bank</div>
+                    <div class="client-logo">Luxury Holdings Inc.</div>
+                    <div class="client-logo">Private Collector</div>
+                </div>
+                
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">Patrick's artistry transformed our corporate gifting program. The custom cufflinks he designed perfectly embody our brand's values of excellence and precision. Our executives and clients were truly impressed with the quality and attention to detail in every piece.</p>
+                        <p class="testimonial-author">- Sarah Johnson, Global Financial Group</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Page -->
+    <section id="shop" class="page">
+        <div class="section-padding shop">
+            <div class="container">
+                <h2 class="section-title text-center">Signature Collection</h2>
+                <p class="text-center">A curated selection of Patrick's exclusive jewelry designs</p>
+                <div class="shop-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Elegance Ring" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Elegance Ring</h3>
+                            <p class="product-price">$2,850</p>
+                            <button class="add-to-cart" data-id="1" data-name="Elegance Ring" data-price="2850" data-image="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Heritage Cufflinks" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Heritage Cufflinks</h3>
+                            <p class="product-price">$1,250</p>
+                            <button class="add-to-cart" data-id="2" data-name="Heritage Cufflinks" data-price="1250" data-image="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Prestige Bracelet" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Prestige Bracelet</h3>
+                            <p class="product-price">$3,500</p>
+                            <button class="add-to-cart" data-id="4" data-name="Prestige Bracelet" data-price="3500" data-image="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Page -->
+    <section id="cart" class="page">
+        <div class="section-padding cart">
+            <div class="container">
+                <h2 class="section-title text-center">Your Cart</h2>
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                        <p id="empty-cart-message" style="text-align: center; font-size: 1.2rem; color: #777;">Your cart is empty</p>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="cart-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="cart-shipping">$25.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="cart-tax">$0.00</span>
+                        </div>
+                        <div class="summary-row summary-total">
+                            <span>Total:</span>
+                            <span id="cart-total">$25.00</span>
+                        </div>
+                        <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+        <div class="section-padding contact">
+            <div class="container">
+                <h2 class="section-title text-center">Commission Your Piece</h2>
+                <p class="text-center">Begin the journey to creating your custom jewelry masterpiece</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Company (if applicable)">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" required>
+                            <option value="" disabled selected>Project Type</option>
+                            <option value="corporate">Corporate Collection</option>
+                            <option value="private">Private Commission</option>
+                            <option value="consultation">Design Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Patrick's Artisan Jewelry</h3>
+                    <p>Crafting exceptional jewelry for corporate clients and private collectors since 2008. Each piece tells a story of precision, passion, and timeless elegance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                        <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+                        <li><i class="fas fa-envelope"></i> contact@patricksartisan.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Patrick's Artisan Jewelry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinksContainer = document.querySelector('.nav-links');
+            const header = document.getElementById('header');
+            
+            // Show home page by default
+            showPage('home');
+            
+            // Navigation click handlers
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                    
+                    // Close mobile menu if open
+                    navLinksContainer.classList.remove('active');
+                });
+            });
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinksContainer.classList.toggle('active');
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Shopping Cart Functionality
+            let cart = [];
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            const cartShipping = document.getElementById('cart-shipping');
+            const cartTax = document.getElementById('cart-tax');
+            const cartTotal = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            
+            // Add to cart buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    const image = this.getAttribute('data-image');
+                    
+                    addToCart(id, name, price, image);
+                });
+            });
+            
+            // Add item to cart
+            function addToCart(id, name, price, image) {
+                const existingItem = cart.find(item => item.id === id);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id,
+                        name,
+                        price,
+                        image,
+                        quantity: 1
+                    });
+                }
+                
+                updateCart();
+                showPage('cart');
+            }
+            
+            // Update cart display
+            function updateCart() {
+                // Update cart count
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = `(${totalItems})`;
+                
+                // Update cart items
+                cartItems.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    
+                    cart.forEach(item => {
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'cart-item';
+                        cartItem.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                            <div class="cart-item-details">
+                                <h3 class="cart-item-title">${item.name}</h3>
+                                <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                            </div>
+                            <div class="cart-item-quantity">
+                                <button class="quantity-btn decrease-quantity" data-id="${item.id}">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}">
+                                <button class="quantity-btn increase-quantity" data-id="${item.id}">+</button>
+                            </div>
+                            <button class="remove-item" data-id="${item.id}">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        `;
+                        cartItems.appendChild(cartItem);
+                    });
+                    
+                    // Add event listeners for quantity changes and removal
+                    document.querySelectorAll('.decrease-quantity').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const id = this.getAttribute('data-id');
+                            updateQuantity(id, -1);
+                        });
+                    });
+                    
+                    document.querySelectorAll('.increase-quantity').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const id = this.getAttribute('data-id');
+                            updateQuantity(id, 1);
+                        });
+                    });
+                    
+                    document.querySelectorAll('.quantity-input').forEach(input => {
+                        input.addEventListener('change', function() {
+                            const id = this.getAttribute('data-id');
+                            const newQuantity = parseInt(this.value);
+                            if (newQuantity > 0) {
+                                setQuantity(id, newQuantity);
+                            } else {
+                                setQuantity(id, 1);
+                            }
+                        });
+                    });
+                    
+                    document.querySelectorAll('.remove-item').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const id = this.getAttribute('data-id');
+                            removeFromCart(id);
+                        });
+                    });
+                }
+                
+                // Update cart totals
+                const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                const shipping = subtotal > 0 ? 25 : 0;
+                const tax = subtotal * 0.08; // 8% tax
+                const total = subtotal + shipping + tax;
+                
+                cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+                cartShipping.textContent = `$${shipping.toFixed(2)}`;
+                cartTax.textContent = `$${tax.toFixed(2)}`;
+                cartTotal.textContent = `$${total.toFixed(2)}`;
+            }
+            
+            // Update item quantity
+            function updateQuantity(id, change) {
+                const item = cart.find(item => item.id === id);
+                if (item) {
+                    item.quantity += change;
+                    if (item.quantity < 1) {
+                        removeFromCart(id);
+                    } else {
+                        updateCart();
+                    }
+                }
+            }
+            
+            // Set item quantity
+            function setQuantity(id, quantity) {
+                const item = cart.find(item => item.id === id);
+                if (item) {
+                    item.quantity = quantity;
+                    updateCart();
+                }
+            }
+            
+            // Remove item from cart
+            function removeFromCart(id) {
+                cart = cart.filter(item => item.id !== id);
+                updateCart();
+            }
+            
+            // Checkout button
+            checkoutBtn.addEventListener('click', function() {
+                if (cart.length > 0) {
+                    alert('Thank you for your order! This is a demo site, so no actual purchase was made.');
+                    cart = [];
+                    updateCart();
+                    showPage('home');
+                } else {
+                    alert('Your cart is empty. Please add items before checking out.');
+                }
+            });
+            
+            // Show specific page
+            function showPage(pageId) {
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                document.getElementById(pageId).classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>
+</body>
+</html>
