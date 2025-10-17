@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Modern Luxury Design */
+        /* Enhanced Luxury Design */
         :root {
             --deep-navy: #0a0e17;
             --rich-gold: #d4af37;
@@ -17,6 +17,7 @@
             --light-ivory: #f8f5f0;
             --charcoal: #1a1a1a;
             --platinum: #e5e4e2;
+            --dark-bronze: #8B7355;
             --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -229,7 +230,7 @@
             display: block;
         }
 
-        /* Hero Section */
+        /* Enhanced Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.8)), url('https://www.icebox.com/themes/default/frontend/oct-2023/assets/avif/home-men.avif');
@@ -266,6 +267,7 @@
             letter-spacing: 2px;
             line-height: 1.1;
             font-weight: 500;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
@@ -273,6 +275,7 @@
             margin-bottom: 40px;
             max-width: 600px;
             font-weight: 300;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         }
 
         .hero-cta {
@@ -280,7 +283,7 @@
             gap: 20px;
         }
 
-        /* About Section */
+        /* Enhanced About Section */
         .about {
             background-color: var(--pure-white);
             position: relative;
@@ -355,7 +358,7 @@
             transform: translateX(-50%);
         }
 
-        /* Portfolio Section */
+        /* Enhanced Portfolio Section */
         .portfolio {
             background-color: var(--deep-navy);
             color: var(--pure-white);
@@ -432,7 +435,7 @@
             margin-bottom: 0;
         }
 
-        /* Services Section */
+        /* Enhanced Services Section */
         .services {
             background-color: var(--light-ivory);
             position: relative;
@@ -487,7 +490,7 @@
             margin-bottom: 20px;
         }
 
-        /* Clients Section */
+        /* Enhanced Clients Section */
         .clients {
             background-color: var(--pure-white);
             position: relative;
@@ -522,7 +525,7 @@
             color: var(--rich-gold);
         }
 
-        /* Testimonials Section */
+        /* Enhanced Testimonials Section */
         .testimonials {
             background-color: var(--deep-navy);
             color: var(--pure-white);
@@ -586,7 +589,7 @@
             font-size: 1.1rem;
         }
 
-        /* Shop Section */
+        /* Enhanced Shop Section */
         .shop {
             background-color: var(--light-ivory);
             position: relative;
@@ -659,140 +662,7 @@
             background-color: var(--warm-gold);
         }
 
-        /* Cart Section */
-        .cart {
-            background-color: var(--pure-white);
-            position: relative;
-        }
-
-        .cart-container {
-            max-width: 1000px;
-            margin: 60px auto 0;
-        }
-
-        .cart-items {
-            margin-bottom: 40px;
-        }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            padding: 30px;
-            border-bottom: 1px solid #eee;
-            transition: var(--transition);
-        }
-
-        .cart-item:hover {
-            background-color: rgba(248, 245, 240, 0.5);
-        }
-
-        .cart-item-img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            margin-right: 30px;
-        }
-
-        .cart-item-details {
-            flex: 1;
-        }
-
-        .cart-item-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .cart-item-price {
-            color: var(--rich-gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .cart-item-quantity {
-            display: flex;
-            align-items: center;
-            margin: 0 30px;
-        }
-
-        .quantity-btn {
-            width: 35px;
-            height: 35px;
-            background-color: var(--light-ivory);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            transition: var(--transition);
-        }
-
-        .quantity-btn:hover {
-            background-color: var(--rich-gold);
-            color: var(--pure-white);
-        }
-
-        .quantity-input {
-            width: 60px;
-            height: 35px;
-            text-align: center;
-            border: 1px solid #ddd;
-            margin: 0 10px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-        }
-
-        .remove-item {
-            background: none;
-            border: none;
-            color: #aaa;
-            cursor: pointer;
-            font-size: 20px;
-            transition: var(--transition);
-        }
-
-        .remove-item:hover {
-            color: #ff4d4d;
-        }
-
-        .cart-summary {
-            background-color: var(--light-ivory);
-            padding: 40px;
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            font-size: 1.1rem;
-        }
-
-        .summary-total {
-            font-weight: bold;
-            font-size: 1.3rem;
-            color: var(--rich-gold);
-        }
-
-        .checkout-btn {
-            width: 100%;
-            padding: 18px;
-            background-color: var(--rich-gold);
-            color: var(--pure-white);
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: var(--transition);
-            margin-top: 30px;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-        }
-
-        .checkout-btn:hover {
-            background-color: var(--warm-gold);
-        }
-
-        /* Contact Section */
+        /* Enhanced Contact Section */
         .contact {
             background-color: var(--deep-navy);
             color: var(--pure-white);
@@ -846,7 +716,7 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Footer */
+        /* Enhanced Footer */
         footer {
             background-color: var(--deep-navy);
             color: var(--pure-white);
@@ -1028,6 +898,105 @@
             color: var(--rich-gold);
         }
 
+        /* New Features */
+        .featured-collections {
+            background-color: var(--light-ivory);
+            padding: 100px 0;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .collection-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .collection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .collection-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--pure-white);
+        }
+
+        .stats-section {
+            background-color: var(--pure-white);
+            padding: 100px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--rich-gold);
+            margin-bottom: 10px;
+        }
+
+        .process-section {
+            background-color: var(--light-ivory);
+            padding: 100px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--pure-white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--rich-gold);
+            color: var(--pure-white);
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .hero h1 {
@@ -1036,6 +1005,10 @@
             
             .about-content {
                 gap: 50px;
+            }
+            
+            .collection-grid, .stats-grid, .process-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -1120,6 +1093,10 @@
             .cart-item-quantity {
                 margin: 20px 0;
             }
+            
+            .collection-grid, .stats-grid, .process-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1174,11 +1151,96 @@
     <section id="home" class="page active">
         <div class="hero">
             <div class="hero-content">
-                <h1>Timeless Elegance, Crafted with Precision</h1>
-                <p>Luxury custom jewelry for corporate clients and private collectors seeking exceptional craftsmanship and distinctive design.</p>
+                <h1>Crafting Timeless Luxury</h1>
+                <p>Exquisite custom jewelry for discerning corporate clients and private collectors. Each piece tells a story of precision, passion, and unparalleled craftsmanship.</p>
                 <div class="hero-cta">
                     <a href="#" class="btn btn-gold nav-link" data-page="portfolio">View Collection</a>
                     <a href="#" class="btn nav-link" data-page="contact">Commission a Piece</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured Collections -->
+        <div class="featured-collections">
+            <div class="container">
+                <h2 class="section-title text-center">Signature Collections</h2>
+                <p class="text-center">Discover our exclusive jewelry lines crafted for the most discerning clients</p>
+                <div class="collection-grid">
+                    <div class="collection-card">
+                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_1.webp" alt="Executive Collection" class="collection-img">
+                        <div class="collection-overlay">
+                            <h3>Executive Collection</h3>
+                            <p>Luxury timepieces and accessories for corporate leaders</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_3.webp" alt="Heritage Collection" class="collection-img">
+                        <div class="collection-overlay">
+                            <h3>Heritage Collection</h3>
+                            <p>Timeless pieces that become family heirlooms</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_4.webp" alt="Modernist Collection" class="collection-img">
+                        <div class="collection-overlay">
+                            <h3>Modernist Collection</h3>
+                            <p>Contemporary designs for the fashion-forward collector</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Custom Commissions</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Corporate Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Process Section -->
+        <div class="process-section">
+            <div class="container">
+                <h2 class="section-title text-center">Our Craftsmanship Process</h2>
+                <p class="text-center">Every piece undergoes a meticulous creation process to ensure perfection</p>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Consultation</h3>
+                        <p>We begin with an in-depth discussion to understand your vision, requirements, and aesthetic preferences.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Design</h3>
+                        <p>Our artisans create detailed sketches and 3D renderings for your approval before production begins.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Crafting</h3>
+                        <p>Using traditional techniques and modern technology, we handcraft your piece with precision and care.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Delivery</h3>
+                        <p>Each finished piece is carefully inspected and presented in luxury packaging with certification.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1193,36 +1255,6 @@
                         <a href="#" class="btn nav-link" data-page="about">Discover the Story</a>
                     </div>
                     <div class="about-image"></div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section-padding portfolio">
-            <div class="container">
-                <h2 class="section-title text-center">Signature Collections</h2>
-                <p class="text-center">A curated selection of custom pieces created for corporate clients and private collectors</p>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_1.webp" alt="Corporate Collection" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h3>Corporate Collection</h3>
-                            <p>Executive gifts for global financial institutions</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_3.webp" alt="Signature Ring" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h3>Signature Ring</h3>
-                            <p>Custom design for a private collector</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://www.icebox.com/themes/default/frontend/oct-2023/assets/custom/cst-media_4.webp" alt="Estate Collection" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h3>Estate Collection</h3>
-                            <p>Luxury pieces for real estate conglomerates</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1244,6 +1276,35 @@
                         </blockquote>
                     </div>
                     <div class="about-image"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced About Details -->
+        <div class="stats-section">
+            <div class="container">
+                <h2 class="section-title text-center">Our Commitment to Excellence</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <i class="fas fa-gem service-icon"></i>
+                        <h3>Ethical Sourcing</h3>
+                        <p>We exclusively use conflict-free diamonds and ethically sourced precious metals, ensuring every piece aligns with our values.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-hands service-icon"></i>
+                        <h3>Handcrafted Quality</h3>
+                        <p>Each piece is meticulously crafted by hand, combining traditional techniques with modern precision for unparalleled quality.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-award service-icon"></i>
+                        <h3>Lifetime Warranty</h3>
+                        <p>All our creations come with a comprehensive lifetime warranty, protecting your investment for generations to come.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-recycle service-icon"></i>
+                        <h3>Sustainable Practices</h3>
+                        <p>We're committed to sustainable luxury, implementing eco-friendly practices throughout our production process.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1315,42 +1376,42 @@
                             <i class="fas fa-gem"></i>
                         </div>
                         <h3>Corporate Collections</h3>
-                        <p>Exclusive jewelry lines designed to embody your brand identity for executive gifts, corporate awards, and milestone celebrations.</p>
+                        <p>Exclusive jewelry lines designed to embody your brand identity for executive gifts, corporate awards, and milestone celebrations. We work closely with your team to create pieces that reflect your company's values and aesthetic.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-crown"></i>
                         </div>
                         <h3>Private Commissions</h3>
-                        <p>Bespoke pieces created for discerning collectors, from engagement rings to statement pieces that become family heirlooms.</p>
+                        <p>Bespoke pieces created for discerning collectors, from engagement rings to statement pieces that become family heirlooms. Each commission begins with a personal consultation to ensure your vision is perfectly realized.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-pencil-alt"></i>
                         </div>
                         <h3>Design Consultation</h3>
-                        <p>Collaborative design process from concept to completion, ensuring each piece perfectly captures your vision and requirements.</p>
+                        <p>Collaborative design process from concept to completion, ensuring each piece perfectly captures your vision and requirements. We provide detailed sketches, material samples, and 3D renderings throughout the process.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h3>Restoration & Repair</h3>
-                        <p>Expert restoration of heirloom pieces and repair of fine jewelry using traditional techniques and premium materials.</p>
+                        <p>Expert restoration of heirloom pieces and repair of fine jewelry using traditional techniques and premium materials. Our craftsmen carefully assess each piece to preserve its original character while ensuring lasting durability.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-award"></i>
                         </div>
                         <h3>Limited Editions</h3>
-                        <p>Exclusive limited-run collections that maintain their value and exclusivity for discerning collectors and corporate clients.</p>
+                        <p>Exclusive limited-run collections that maintain their value and exclusivity for discerning collectors and corporate clients. Each limited edition piece is numbered and accompanied by a certificate of authenticity.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-box-open"></i>
                         </div>
                         <h3>Packaging & Presentation</h3>
-                        <p>Luxury packaging solutions that enhance the unboxing experience and reflect the quality of your investment piece.</p>
+                        <p>Luxury packaging solutions that enhance the unboxing experience and reflect the quality of your investment piece. From custom-designed boxes to personalized certificates, we ensure every detail reflects our commitment to excellence.</p>
                     </div>
                 </div>
             </div>
@@ -1375,6 +1436,19 @@
                     <div class="testimonial">
                         <p class="testimonial-text">Patrick's artistry transformed our corporate gifting program. The custom cufflinks he designed perfectly embody our brand's values of excellence and precision. Our executives and clients were truly impressed with the quality and attention to detail in every piece.</p>
                         <p class="testimonial-author">- Sarah Johnson, Global Financial Group</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Testimonials -->
+        <div class="section-padding testimonials">
+            <div class="container">
+                <h2 class="section-title text-center">Client Experiences</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">Working with Patrick was an exceptional experience from start to finish. He took the time to understand our company culture and created a collection of awards that perfectly represented our values. The craftsmanship is unparalleled, and our employees treasure these pieces.</p>
+                        <p class="testimonial-author">- Michael Chen, Tech Innovations Inc.</p>
                     </div>
                 </div>
             </div>
@@ -1849,9 +1923,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
