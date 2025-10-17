@@ -934,6 +934,100 @@
             font-size: 0.9rem;
         }
 
+        /* Floating Cart */
+        .floating-cart {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--rich-gold);
+            color: var(--pure-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .floating-cart:hover {
+            background-color: var(--warm-gold);
+            transform: translateY(-5px);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--deep-navy);
+            color: var(--pure-white);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .cart-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-modal-content {
+            background-color: var(--pure-white);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: translateY(50px);
+            transition: var(--transition);
+        }
+
+        .cart-modal.active .cart-modal-content {
+            transform: translateY(0);
+        }
+
+        .close-cart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        .close-cart:hover {
+            color: var(--rich-gold);
+        }
+
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .hero h1 {
@@ -1071,7 +1165,6 @@
                     <li><a href="#" class="nav-link" data-page="clients">Clients</a></li>
                     <li><a href="#" class="nav-link" data-page="shop">Shop</a></li>
                     <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
-                    <li><a href="#" class="nav-link" data-page="cart">Cart <span id="cart-count">(0)</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -1319,6 +1412,70 @@
                             <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
                         </div>
                     </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
+					<div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" alt="Timeless Necklace" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless Necklace</h3>
+                            <p class="product-price">$4,200</p>
+                            <button class="add-to-cart" data-id="3" data-name="Timeless Necklace" data-price="4200" data-image="https://images.unsplash.com/photo-1588444650700-6c7f0c89d36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80">Add to Cart</button>
+                        </div>
+                    </div>
                     <div class="product-card">
                         <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Prestige Bracelet" class="product-img">
                         <div class="product-info">
@@ -1326,40 +1483,6 @@
                             <p class="product-price">$3,500</p>
                             <button class="add-to-cart" data-id="4" data-name="Prestige Bracelet" data-price="3500" data-image="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cart Page -->
-    <section id="cart" class="page">
-        <div class="section-padding cart">
-            <div class="container">
-                <h2 class="section-title text-center">Your Cart</h2>
-                <div class="cart-container">
-                    <div class="cart-items" id="cart-items">
-                        <!-- Cart items will be dynamically added here -->
-                        <p id="empty-cart-message" style="text-align: center; font-size: 1.2rem; color: #777;">Your cart is empty</p>
-                    </div>
-                    <div class="cart-summary">
-                        <div class="summary-row">
-                            <span>Subtotal:</span>
-                            <span id="cart-subtotal">$0.00</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Shipping:</span>
-                            <span id="cart-shipping">$25.00</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Tax:</span>
-                            <span id="cart-tax">$0.00</span>
-                        </div>
-                        <div class="summary-row summary-total">
-                            <span>Total:</span>
-                            <span id="cart-total">$25.00</span>
-                        </div>
-                        <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
@@ -1437,6 +1560,44 @@
         </div>
     </footer>
 
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart" style="display: none;">
+        <i class="fas fa-shopping-bag"></i>
+        <div class="cart-count" id="floating-cart-count">0</div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <p id="empty-cart-message" style="text-align: center; font-size: 1.2rem; color: #777;">Your cart is empty</p>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cart-shipping">$25.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="cart-tax">$0.00</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total:</span>
+                    <span id="cart-total">$25.00</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Page Navigation
         document.addEventListener('DOMContentLoaded', function() {
@@ -1478,7 +1639,10 @@
             
             // Shopping Cart Functionality
             let cart = [];
-            const cartCount = document.getElementById('cart-count');
+            const floatingCart = document.getElementById('floating-cart');
+            const floatingCartCount = document.getElementById('floating-cart-count');
+            const cartModal = document.getElementById('cart-modal');
+            const closeCart = document.getElementById('close-cart');
             const cartItems = document.getElementById('cart-items');
             const emptyCartMessage = document.getElementById('empty-cart-message');
             const cartSubtotal = document.getElementById('cart-subtotal');
@@ -1517,14 +1681,21 @@
                 }
                 
                 updateCart();
-                showPage('cart');
+                showCartModal();
             }
             
             // Update cart display
             function updateCart() {
                 // Update cart count
                 const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-                cartCount.textContent = `(${totalItems})`;
+                floatingCartCount.textContent = totalItems;
+                
+                // Show/hide floating cart
+                if (totalItems > 0) {
+                    floatingCart.style.display = 'flex';
+                } else {
+                    floatingCart.style.display = 'none';
+                }
                 
                 // Update cart items
                 cartItems.innerHTML = '';
@@ -1630,12 +1801,33 @@
                 updateCart();
             }
             
+            // Show cart modal
+            function showCartModal() {
+                cartModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Close cart modal
+            closeCart.addEventListener('click', function() {
+                cartModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Floating cart click
+            floatingCart.addEventListener('click', function() {
+                if (cart.length > 0) {
+                    showCartModal();
+                }
+            });
+            
             // Checkout button
             checkoutBtn.addEventListener('click', function() {
                 if (cart.length > 0) {
                     alert('Thank you for your order! This is a demo site, so no actual purchase was made.');
                     cart = [];
                     updateCart();
+                    cartModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                     showPage('home');
                 } else {
                     alert('Your cart is empty. Please add items before checking out.');
