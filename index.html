@@ -1626,6 +1626,30 @@
             .luxury-banner h2 {
                 font-size: 28px;
             }
+
+            /* Emergency fix for horizontal scrolling */
+            @media (max-width: 768px) {
+                html, body {
+                    overflow-x: hidden !important;
+                    position: relative !important;
+                    width: 100% !important;
+                }
+                
+                * {
+                    max-width: 100vw !important;
+                }
+                
+                .container,
+                .section,
+                .page-section,
+                .hero,
+                .services-slider,
+                .categories,
+                .products-grid {
+                    overflow-x: hidden !important;
+                    width: 100% !important;
+                }
+            }
         }
     </style>
 </head>
@@ -2745,3 +2769,4 @@
     </script>
 </body>
 </html>
+
